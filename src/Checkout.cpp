@@ -1,5 +1,6 @@
 #include "Checkout.h"
 #include <string>
+#include <iostream>
 
 using namespace std;
 
@@ -19,7 +20,7 @@ void Checkout::addItemPrice(string item, int price) {
 void Checkout::addItem(string item) {
     map<string, int>::iterator priceIter = prices.find(item);
     if (priceIter == prices.end()) {
-        throw invalid_argument("Item has no price");
+        cout << ("Item has no price");
     }
     items[item] += 1;
 }
