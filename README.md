@@ -8,3 +8,12 @@ Template repo for c++ TDD w/ CMake and gtest
     - https://www.udemy.com/course/free-learn-c-tutorial-beginners/
 
    Multiple Main () Method: http://www.cplusplus.com/forum/beginner/46664/
+
+C++ 
+C vs C++
+C: procedural, munual if/else logic, static members
+C++ OO/procedural, exception handling, encapsultation
+
+# Strings
+char[n] from cstring library
+string from std library

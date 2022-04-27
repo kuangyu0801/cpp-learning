@@ -2,7 +2,10 @@
 #include <iostream>
 #include <vector>
 #include <iterator>
-
+#include <cstring>
+// https://www.cplusplus.com/reference/climits/
+#include <climits>
+#include <iomanip>
 using namespace std;
 
 void Demo::demoIterator() {
@@ -104,5 +107,132 @@ void Demo::demoString() {
     for (auto c : s1) {
         printf("%d-th char is: %c \n", i, c);
         i++;
+    }
+
+    string t1 = "Hello";
+    string t2 = "Fred";
+    string t3 = t1 + t2;
+    cout << t1 << t2 << endl;
+    cout << t3 << endl;
+}
+
+void Demo::demoInput() {
+    cout << "Enter user name: " << flush;
+
+    string input;
+
+    cin >> input;
+    cout << "You entered: " << input << endl;
+
+    int value;
+    cout << "Enter user value: " << flush;
+    cin >> value;
+    cout << "You entered: " << value << endl;
+
+}
+
+void Demo::demoInteger() {
+    // #include <climits>
+    cout << "Max int value: " << INT_MAX << endl;
+    cout << "Min int value: " << INT_MIN << endl;
+    cout << "Max short int value: " << SHRT_MAX << endl;
+    cout << "Min short int value: " << SHRT_MIN << endl;
+    cout << "Max long int value: " << LONG_MAX << endl;
+    cout << "Min long int value: " << LONG_MIN << endl;
+    cout << "Size of int: " << sizeof(int) << endl;
+    cout << "Size of short int: " << sizeof(short int) << endl;
+    cout << "Size of long int: " << sizeof(long int) << endl;
+}
+
+void Demo::demoFloat() {
+    float fValue = 76.8;
+    cout << fValue << endl;
+    cout << scientific << fValue << endl;
+    cout << fixed << fValue << endl;
+    cout << "size of float: " << sizeof(float) << endl;
+    double dValue = 76.8;
+    cout << "size of double: " << sizeof(double) << endl;
+    dValue = 123.456789123456;
+    cout << setprecision(20) << fixed << dValue << endl;
+    long double lValue = 123.456789123456;
+    cout << "size of long double: " << sizeof(long double) << endl;
+    // #include <iomanip>
+    cout << setprecision(20) << fixed << lValue << endl;
+}
+
+void Demo::demoBool() {
+    bool bValue = true;
+    cout << bValue << endl;
+    cout << "size of bool: " << sizeof(bool) << endl;
+
+    char cValue = 55;
+    
+    cout << "size of char: " << sizeof(char) << endl;
+    cout << cValue << endl;
+    cValue = 'g';
+    cout << cValue << endl;
+    // for uni code up to 4 bytes
+    wchar_t wValue = 'y';
+    cout << "size of wchar_t: " << sizeof(wchar_t) << endl;
+    cout << wValue << endl;
+}
+
+void Demo::demoIf() {
+    string password = "hello";
+    cout << "Enter your password > " << flush;
+
+    string input;
+    cin >> input;
+
+    cout << "'" << input << "'" << endl;
+    if (input == password) {
+        cout << "password is correct" << endl;
+    } else {
+        cout << "password is incorrect" << endl;
+    }
+
+    // reading from left to right
+    int v1 = 9;
+    cout << "(v1 == 8 && v1 != 10 || v1 < 10) evaluates to" << endl;
+    if (v1 == 8 && v1 != 10 || v1 < 10) {
+        cout << "true" << endl;
+    } else {
+        cout << "false" << endl;
+    }
+}
+
+void Demo::compareFloat() {
+    float fValue = 1.1;
+    cout << setprecision(10) << fValue << endl;
+    if (fValue == 1.1) {
+        cout << "float is equal!" << endl;
+    } else {
+        cout << "float is not equal!" << endl;
+    }
+}
+
+void Demo::whileLoop() {
+    int i = 10;
+    while (i < 10) {
+        cout << "i: " << i << endl;
+        i += 1;
+    }
+
+    int j = 10;
+    do {
+        cout << "j: " << j << endl;
+        j += 1;
+    } while (j < 10);
+}
+
+void Demo::forLoop() {
+    // infinite loop
+    int i = 0;
+    for (; ;) {
+        cout << "running" << endl;
+        if (i == 100) {
+            break;
+        }
+        i += 1;
     }
 }
