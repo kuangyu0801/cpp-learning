@@ -262,4 +262,27 @@ void Demo::multiDimensionArray() {
         }
         cout << endl;
     }
+
+    for (int i = 0; i < sizeof(animals)/sizeof(animals[0]); i += 1) {
+        for (int j = 0; j < sizeof(animals[0])/sizeof(string); j += 1) {
+            cout << "animals[" << i << "][" << j << "]: " << animals[i][j] << ", "<<flush;
+        }
+        cout << endl;
+    }
+}
+
+void Demo::demoSwitch() {
+    int value = 5;
+    switch(value) {
+    // cannot use vairable for condition
+    // constant is allowed
+    case 4:
+        cout << "4 is found" << endl;
+        break;
+    case 5:
+        cout << "5 is found" << endl;
+        break;
+    default:
+        cout << "non-is-found" << endl;
+    }
 }

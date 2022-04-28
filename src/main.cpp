@@ -20,7 +20,8 @@ int main() {
     Demo::compareFloat();
     //Demo::whileLoop();
     //Demo::forLoop();
-    Demo::demoArray();
+    //Demo::demoArray();
     //Demo::multiDimensionArray();
+    Demo::demoSwitch();
     return 0;
 }
