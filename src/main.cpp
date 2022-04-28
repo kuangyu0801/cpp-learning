@@ -2,6 +2,7 @@
 #include "Formular.h"
 #include "Demo.hpp"
 #include "Function.hpp"
+#include "Cat.hpp"
 using namespace std;
 
 void demoFunctionClass() {
@@ -11,6 +12,13 @@ void demoFunctionClass() {
     int tenTimes = Function::tenTimesValue(returnInput);
     cout << "Ten times input is " << tenTimes << endl;
     Function::prototypeDemo();
+}
+
+void demoOOP() {
+    Cat cat;
+
+    cat.speak();
+    cat.jump();
 }
 
 int main() {
@@ -32,7 +40,8 @@ int main() {
     //Demo::forLoop();
     //Demo::demoArray();
     //Demo::multiDimensionArray();
-    Demo::demoSwitch();
-    demoFunctionClass();
+    //Demo::demoSwitch();
+    //demoFunctionClass();
+    demoOOP();
     return 0;
 }
