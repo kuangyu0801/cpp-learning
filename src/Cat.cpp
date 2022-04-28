@@ -2,9 +2,21 @@
 #include <iostream>
 using namespace std;
 void Cat::speak() {
-    cout << "Cat meows!" << endl;
+    if (isHappy) {
+        cout << "Meows!" << endl;
+    } else {
+        cout << "Sssss... " << endl;
+    }
 }
 
 void Cat::jump() {
     cout << "Cat jumps!" << endl;
+}
+
+void Cat::makeHappy() {
+    isHappy = true;
+}
+
+void Cat::makeUnhappy() {
+    isHappy = false;
 }

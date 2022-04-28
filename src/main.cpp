@@ -16,9 +16,18 @@ void demoFunctionClass() {
 
 void demoOOP() {
     Cat cat;
-
+    
+    //cat.isHappy = true;
+    cat.speak();
+    cat.makeHappy();
     cat.speak();
     cat.jump();
+    
+    Cat bob;
+    //bob.isHappy = false;
+    bob.speak();
+    bob.makeUnhappy();
+    bob.speak();
 }
 
 int main() {
