@@ -19,6 +19,7 @@ int main() {
     //Demo::demoIf();
     Demo::compareFloat();
     //Demo::whileLoop();
-    Demo::forLoop();
+    //Demo::forLoop();
+    Demo::demoArray();
     return 0;
 }

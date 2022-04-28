@@ -22,8 +22,10 @@ void Demo::demoIterator() {
 void Demo::demoArray() {
     cout << "[demoArray()]" << endl;
     // array must be declared with cons expression
-    int size = 3;
+    // Two ways to declare an array
     int arr[] = {1, 2, 3};
+    
+    int size = 3;
     int arr_copy[size];
     // accessing array element with iterator
     // std::begin()/end() is C11 feature
@@ -46,6 +48,16 @@ void Demo::demoArray() {
     for (int i = 0; i < 5; i++) {
         printf("%d ", arr1[i]);
     }
+
+    // array of string
+    string texts[] = {"apple", "banana", "orange"};
+    for (int i = 0; i < 3; i += 1) {
+        cout << "Element at index " << i << ":" << texts[i] << endl;
+    }
+
+    // accessing non-exist array
+    // result in segmentation fault
+    cout << texts[4] << endl;
 }
 
 void Demo::demoPointer() {
