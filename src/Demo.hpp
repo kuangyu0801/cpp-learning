@@ -15,4 +15,5 @@ public:
     static void compareFloat();
     static void whileLoop();
     static void forLoop();
+    static void multiDimensionArray();
 };

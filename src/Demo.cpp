@@ -51,13 +51,14 @@ void Demo::demoArray() {
 
     // array of string
     string texts[] = {"apple", "banana", "orange"};
-    for (int i = 0; i < 3; i += 1) {
+    for (int i = 0; i < sizeof(texts)/sizeof(string); i += 1) {
         cout << "Element at index " << i << ":" << texts[i] << endl;
     }
+    cout << sizeof(texts) << endl;
 
     // accessing non-exist array
     // result in segmentation fault
-    cout << texts[4] << endl;
+    // cout << texts[4] << endl;
 }
 
 void Demo::demoPointer() {
@@ -246,5 +247,19 @@ void Demo::forLoop() {
             break;
         }
         i += 1;
+    }
+}
+
+void Demo::multiDimensionArray() {
+    string animals[2][3] = {
+        {"fox", "dog", "cat"},
+        {"mouse", "squirrel", "parrot"}
+    };
+
+    for (int i = 0; i < 2; i += 1) {
+        for (int j = 0; j < 3; j += 1) {
+            cout << "animals[" << i << "][" << j << "]: " << animals[i][j] << ", "<<flush;
+        }
+        cout << endl;
     }
 }

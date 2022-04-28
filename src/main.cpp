@@ -21,5 +21,6 @@ int main() {
     //Demo::whileLoop();
     //Demo::forLoop();
     Demo::demoArray();
+    //Demo::multiDimensionArray();
     return 0;
 }
