@@ -8,6 +8,11 @@ Cat::Cat() {
     cout << "Cat created" << endl;
 }
 
+// constructor initialization list
+Cat::Cat(string name, string gender): name(name), gender(gender) {
+
+}
+
 Cat::Cat(string name, int age, string gender) {
     this->name = name;
     this->age = age;

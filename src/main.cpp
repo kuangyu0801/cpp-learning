@@ -40,6 +40,9 @@ void demoOOP() {
 
     Cat cat4("Naomi", 3, "Female");
     cout << cat4.toString() << endl;
+
+    Cat cat5("Jacob", "Male");
+    cout << cat5.toString() << endl;
 }
 
 int main() {
