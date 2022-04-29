@@ -32,3 +32,11 @@ void Cat::makeHappy() {
 void Cat::makeUnhappy() {
     isHappy = false;
 }
+
+void Cat::setName(string input) {
+    name = input;
+}
+
+string Cat::getName() {
+    return name;
+}

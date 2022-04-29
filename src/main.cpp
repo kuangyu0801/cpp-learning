@@ -18,16 +18,20 @@ void demoOOP() {
     Cat cat;
     
     //cat.isHappy = true;
+    cat.setName("Garfield");
     cat.speak();
     cat.makeHappy();
     cat.speak();
     cat.jump();
+    cout << cat.getName() << endl;
     
     Cat bob;
     //bob.isHappy = false;
+    bob.setName("Bob");
     bob.speak();
     bob.makeUnhappy();
     bob.speak();
+    cout << bob.getName() << endl;
 }
 
 int main() {
