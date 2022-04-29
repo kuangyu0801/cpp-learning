@@ -6,9 +6,12 @@ class Cat{
 private:
     bool isHappy;
     string name;
+    int age;
 public:
     // constructor
     Cat();
+    // inline constuctor
+    Cat(string input, int num) { name = input; age = num;}; 
     // destructor
     ~Cat();
     void speak();
@@ -17,5 +20,6 @@ public:
     void makeUnhappy();
     void setName(string input);
     string getName();
+    string toString();
 };
 #endif

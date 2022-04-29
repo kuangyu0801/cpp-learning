@@ -25,13 +25,13 @@ void demoOOP() {
     cat.jump();
     cout << cat.getName() << endl;
     
-    Cat bob;
+    Cat bob("Bob", 11);
     //bob.isHappy = false;
-    bob.setName("Bob");
     bob.speak();
     bob.makeUnhappy();
     bob.speak();
     cout << bob.getName() << endl;
+    cout << bob.toString() << endl;
 }
 
 int main() {

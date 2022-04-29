@@ -1,5 +1,6 @@
 #include "Cat.hpp"
 #include <iostream>
+#include <sstream>
 using namespace std;
 
 // constructor
@@ -39,4 +40,13 @@ void Cat::setName(string input) {
 
 string Cat::getName() {
     return name;
+}
+
+string Cat::toString() {
+    stringstream ss;
+    ss << "Cat is ";
+    ss << name;
+    ss << " with age of ";
+    ss << age;
+    return ss.str();
 }
