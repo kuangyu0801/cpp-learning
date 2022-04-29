@@ -7,11 +7,13 @@ private:
     bool isHappy;
     string name;
     int age;
+    string gender;
 public:
     // constructor
     Cat();
     // inline constuctor
     Cat(string input, int num) { name = input; age = num;}; 
+    Cat(string name, int age, string gender);
     // destructor
     ~Cat();
     void speak();

@@ -32,6 +32,14 @@ void demoOOP() {
     bob.speak();
     cout << bob.getName() << endl;
     cout << bob.toString() << endl;
+
+
+    Cat cat3("Kathy", 15, "Female");
+    cout << cat3.toString() << endl;
+
+
+    Cat cat4("Naomi", 3, "Female");
+    cout << cat4.toString() << endl;
 }
 
 int main() {

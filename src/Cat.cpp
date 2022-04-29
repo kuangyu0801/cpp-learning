@@ -8,6 +8,12 @@ Cat::Cat() {
     cout << "Cat created" << endl;
 }
 
+Cat::Cat(string name, int age, string gender) {
+    this->name = name;
+    this->age = age;
+    this->gender = gender;
+    cout << "the object is allocated in: " << this << endl;
+}
 
 // destroctor
 Cat::~Cat() {
@@ -48,5 +54,7 @@ string Cat::toString() {
     ss << name;
     ss << " with age of ";
     ss << age;
+    ss << " and gender of ";
+    ss << gender;
     return ss.str();
 }
