@@ -4,6 +4,10 @@ class Cat{
 private:
     bool isHappy;
 public:
+    // constructor
+    Cat();
+    // destructor
+    ~Cat();
     void speak();
     void jump();
     void makeHappy();

@@ -1,6 +1,18 @@
 #include "Cat.hpp"
 #include <iostream>
 using namespace std;
+
+// constructor
+Cat::Cat() {
+    cout << "Cat created" << endl;
+}
+
+
+// destroctor
+Cat::~Cat() {
+    cout << "Cat destroyed" << endl;
+}
+
 void Cat::speak() {
     if (isHappy) {
         cout << "Meows!" << endl;
