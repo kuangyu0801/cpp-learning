@@ -56,5 +56,6 @@ int main() {
     //Demo::demoSwitch();
     //demoFunctionClass();
     demoOOP();
+    Demo::demoStringStream();
     return 0;
 }

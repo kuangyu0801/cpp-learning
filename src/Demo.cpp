@@ -6,6 +6,7 @@
 // https://www.cplusplus.com/reference/climits/
 #include <climits>
 #include <iomanip>
+#include <sstream>
 using namespace std;
 
 void Demo::demoIterator() {
@@ -285,4 +286,18 @@ void Demo::demoSwitch() {
     default:
         cout << "non-is-found" << endl;
     }
+}
+
+void Demo::demoStringStream() {
+    // https://www.cplusplus.com/reference/sstream/stringstream/
+    // equivalent to string buffer in java
+    stringstream ss;
+    int age = 10;
+    string name = "liku";
+    // won't compile because + is not supported
+    // string str = name + "has a age of " + age;
+    ss << name;
+    ss << " has a age of ";
+    ss << age;
+    cout << ss.str() << endl;
 }

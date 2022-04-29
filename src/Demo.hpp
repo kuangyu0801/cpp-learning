@@ -17,4 +17,5 @@ public:
     static void forLoop();
     static void multiDimensionArray();
     static void demoSwitch();
+    static void demoStringStream();
 };
