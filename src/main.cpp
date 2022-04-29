@@ -3,6 +3,7 @@
 #include "Demo.hpp"
 #include "Function.hpp"
 #include "Cat.hpp"
+#include "Pointer.h"
 using namespace std;
 
 void demoFunctionClass() {
@@ -45,6 +46,10 @@ void demoOOP() {
     cout << cat5.toString() << endl;
 }
 
+
+void demoPointer() {
+    Pointer::basic();
+}
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;
     /*
@@ -66,7 +71,8 @@ int main() {
     //Demo::multiDimensionArray();
     //Demo::demoSwitch();
     //demoFunctionClass();
-    demoOOP();
-    Demo::demoStringStream();
+    //demoOOP();
+    //Demo::demoStringStream();
+    demoPointer();
     return 0;
 }
