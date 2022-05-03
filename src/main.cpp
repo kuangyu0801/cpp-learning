@@ -49,6 +49,7 @@ void demoOOP() {
 
 void demoPointer() {
     Pointer::basic();
+    Pointer::array();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;

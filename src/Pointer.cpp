@@ -21,3 +21,38 @@ void Pointer::basic() {
     manipulate(ptrValue);
     cout << "Value via pointer after manipulate(): " << *ptrValue << endl; // 20
 }
+
+void Pointer::array() {
+    string strs[] = {"one", "two", "three"};
+    // points to the first element in the array
+    string *pStrs = strs;
+    int n = sizeof(strs)/sizeof(string);
+    cout << n << endl;
+
+    // loop through an array using a pointer
+    for (int i = 0; i < n; i += 1) {
+        cout << strs[i] << " " << flush;
+        cout << pStrs[i] << " " << flush;
+        cout << endl;
+    }
+
+    // loop through an array by increasing a pointer
+    for (int i = 0; i < n; i += 1) {
+        cout << *pStrs << " " << flush;
+        pStrs += 1;
+        cout << endl;
+    }
+
+    string *pFirst = strs;
+    string *pEnd = &strs[2];
+
+    // loop through an array stopped by comparison
+    cout << "loop through an array stopped by comparison..." << endl;
+    while (true) {
+        cout << *pFirst << " " << flush;
+        if (pFirst == pEnd) {
+            break;
+        }
+        pFirst += 1;
+    }
+}

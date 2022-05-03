@@ -5,5 +5,6 @@ class Pointer {
 public:
     static void basic();
     static void manipulate(int *ptrValue);
+    static void array();
 };
 #endif /* POINTER_H_ */
