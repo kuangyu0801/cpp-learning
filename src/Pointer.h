@@ -7,5 +7,6 @@ public:
     static void manipulate(int *ptrValue);
     static void array();
     static void arith();
+    static void chararray();
 };
 #endif /* POINTER_H_ */

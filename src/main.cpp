@@ -51,6 +51,7 @@ void demoPointer() {
     Pointer::basic();
     Pointer::array();
     Pointer::arith();
+    Pointer::chararray();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;

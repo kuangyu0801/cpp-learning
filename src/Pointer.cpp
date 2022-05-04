@@ -82,3 +82,40 @@ void Pointer::arith() {
 
 
 }
+
+void Pointer::chararray() {
+    // last is a null character \0
+    char array[] = "hello";
+    cout << array << endl;
+
+    for (int i = 0; i < sizeof(array); i += 1) {
+        cout << i << ": " << array[i] << " in " << (int) array[i] << endl;
+    }
+
+    // output all the chars with a while loop
+    int i = 0;
+    while (true) {
+        // stop at null character
+        if (array[i] == 0) {
+            break;
+        }
+        cout << i << ": " << array[i] << endl;
+        i += 1;
+    }
+
+
+    char *pStart = array;
+    char *pEnd = array + sizeof(array) - 2;
+    // reverse string
+    while (pStart < pEnd) {
+        
+        char temp = *pStart;
+        *pStart = *pEnd;
+        *pEnd = temp;
+        pStart += 1;
+        pEnd -= 1;
+    }
+
+    cout << array << endl;
+
+}
