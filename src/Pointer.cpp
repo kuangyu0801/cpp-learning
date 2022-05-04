@@ -56,3 +56,29 @@ void Pointer::array() {
         pFirst += 1;
     }
 }
+
+void Pointer::arith() {
+    const int N = 5;
+    string strs[] = {"one", "two", "three", "four", "five"};
+
+    string *pStrs = strs;
+
+    pStrs += 2;
+
+    cout << *pStrs << endl;
+
+    pStrs -= 2;
+
+    cout << *pStrs << endl;
+
+    string *pEnd = &strs[N];
+
+    while (pStrs != pEnd) {
+        int diff = pEnd - pStrs;
+        cout << diff << ": " << *pStrs << endl;
+        pStrs += 1;
+    }
+
+
+
+}

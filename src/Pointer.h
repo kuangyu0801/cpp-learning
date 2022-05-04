@@ -6,5 +6,6 @@ public:
     static void basic();
     static void manipulate(int *ptrValue);
     static void array();
+    static void arith();
 };
 #endif /* POINTER_H_ */
