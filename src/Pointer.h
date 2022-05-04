@@ -11,5 +11,6 @@ public:
     static void reference();
     static void demoConst();
     static void copyConstructor();
+    static void newOperator();
 };
 #endif /* POINTER_H_ */

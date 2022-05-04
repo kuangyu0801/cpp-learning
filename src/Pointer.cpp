@@ -192,3 +192,15 @@ void Pointer::copyConstructor() {
     a3.speak();
 
 }
+
+
+void Pointer::newOperator() {
+    // new Animal will also do
+    Animal *pAnimal = new Animal();
+    // dot operator '.' has higher precedence than star operator '*'
+    // cannot directly call pointer with *().
+    pAnimal->setName("Bob");
+    pAnimal->speak();
+    // need to explicitly recollect the allocated memory
+    delete pAnimal;
+}

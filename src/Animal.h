@@ -6,6 +6,7 @@ private:
     string name;
 public:
     Animal() {cout << "Animal created." << endl;};
+    ~Animal() {cout << "Animal destroyed." << endl;};
     // overriding the default copy constructor
     Animal(const Animal &other): name(other.name) { cout << "Animal created by copy constuctor" << endl;};
     void setName(string name) {this->name = name;};

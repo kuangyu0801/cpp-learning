@@ -55,6 +55,7 @@ void demoPointer() {
     Pointer::reference();
     Pointer::demoConst();
     Pointer::copyConstructor();
+    Pointer::newOperator();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;
