@@ -54,6 +54,7 @@ void demoPointer() {
     Pointer::chararray();
     Pointer::reference();
     Pointer::demoConst();
+    Pointer::copyConstructor();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;

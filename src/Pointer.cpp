@@ -1,4 +1,5 @@
 #include "Pointer.h"
+#include "Animal.h"
 #include <iostream>
 using namespace std;
 
@@ -170,4 +171,24 @@ void Pointer::demoConst() {
     // chaning the pointer value is allowed, this will change the pointer integer v
     *p3 = v2;
     cout << *p1 << ": " << *p2 << ": " << *p3 <<endl;
+}
+
+void Pointer::copyConstructor() {
+    
+    // same as using copy constructor directly
+    Animal a1;
+    a1.setName("Bob");
+
+    // using = is implictly calling copy constructor
+    // creates a new object
+    Animal a2 = a1;
+    a2.speak();
+    a2.setName("Cathy");
+
+    a1.speak();
+    a2.speak();
+
+    Animal a3(a1);
+    a3.speak();
+
 }

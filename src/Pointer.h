@@ -10,5 +10,6 @@ public:
     static void chararray();
     static void reference();
     static void demoConst();
+    static void copyConstructor();
 };
 #endif /* POINTER_H_ */
