@@ -56,6 +56,7 @@ void demoPointer() {
     Pointer::demoConst();
     Pointer::copyConstructor();
     Pointer::newOperator();
+    Pointer::returnObject();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;

@@ -196,6 +196,7 @@ void Pointer::copyConstructor() {
 
 void Pointer::newOperator() {
     // new Animal will also do
+    // object is created on "heap" rather than stack
     Animal *pAnimal = new Animal();
     // dot operator '.' has higher precedence than star operator '*'
     // cannot directly call pointer with *().
@@ -203,4 +204,11 @@ void Pointer::newOperator() {
     pAnimal->speak();
     // need to explicitly recollect the allocated memory
     delete pAnimal;
+}
+
+void Pointer::returnObject() {
+    Animal *pA = Animal::createAnimal();
+    pA->speak();
+
+    delete pA;
 }
