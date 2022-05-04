@@ -119,3 +119,55 @@ void Pointer::chararray() {
     cout << array << endl;
 
 }
+
+
+void changeWithoutReference(int value) {
+    value = 15;
+}
+
+void changeWithReference(int &value) {
+    value = 15;
+}
+
+void Pointer::reference() {
+    int v1 = 8;
+    int &v2 = v1;
+    cout << "v1: " << v1 << ", v2: " << v2 << endl;
+
+    v2 = 10;
+    cout << "v1: " << v1 << ", v2: " << v2 << endl;
+
+    changeWithReference(v2);
+    cout << "v1: " << v1 << ", v2: " << v2 << endl;
+
+    changeWithoutReference(v2);
+    cout << "v1: " << v1 << ", v2: " << v2 << endl;
+}
+
+void Pointer::demoConst() {
+    cout << "Pointer::demoConst()" << endl;
+    int v = 10;
+    // tip: reading the type backwards
+    // pointer to an integer
+    int *p1 = &v;
+
+    // pointer to an constant integer
+    const int *p2 = &v;
+
+    cout << *p1 << ": " << *p2 << endl;
+
+    v = 13;
+    // chaning int is not allowed since it is pointed to constant int
+    // *p2 = 13;
+    cout << *p1 << ": " << *p2 << endl;
+
+    // constant pointer to an integer
+    int * const p3 = &v;
+    int v2 = 15;
+    
+    // changing pointer is not allowed since the pointer itself is constant
+    // p3 = &v2;
+    // chaning the pointer value is allowed, this will change the pointer integer v
+    *p3 = v2;
+    cout << *p1 << ": " << *p2 << ": " << *p3 <<endl;
+}

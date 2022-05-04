@@ -8,5 +8,7 @@ public:
     static void array();
     static void arith();
     static void chararray();
+    static void reference();
+    static void demoConst();
 };
 #endif /* POINTER_H_ */
