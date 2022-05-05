@@ -13,5 +13,6 @@ public:
     static void copyConstructor();
     static void newOperator();
     static void returnObject();
+    static void allocateMemory();
 };
 #endif /* POINTER_H_ */

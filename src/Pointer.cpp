@@ -212,3 +212,15 @@ void Pointer::returnObject() {
 
     delete pA;
 }
+
+void Pointer::allocateMemory() {
+    Animal *pAnimal = new Animal[10];
+    // destroy all 
+    delete [] pAnimal;
+    // cannot use delete pAnimal;
+    // will result munmap_chunk(): invalid pointer
+    // new can be used for all type
+    char *chs = new char[1000];
+
+    delete [] chs;
+}
