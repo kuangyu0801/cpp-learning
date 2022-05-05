@@ -59,6 +59,7 @@ void demoPointer() {
     Pointer::returnObject();
     Pointer::allocateMemory();
     Pointer::passArray();
+    Pointer::useNamespace();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;
@@ -84,5 +85,7 @@ int main() {
     //demoOOP();
     //Demo::demoStringStream();
     demoPointer();
+
+
     return 0;
 }

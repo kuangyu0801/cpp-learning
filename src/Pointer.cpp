@@ -1,7 +1,10 @@
 #include "Pointer.h"
 #include "Animal.h"
+#include "Animals.h"
 #include <iostream>
 using namespace std;
+using namespace liku;
+
 
 void Pointer::manipulate(int *ptrValue) {
     cout << "Value via pointer: " << *ptrValue << endl; // 10
@@ -266,4 +269,15 @@ void Pointer::passArray() {
     char *pChs = getCharArray(10);
     cout << sizeof(pChs) << endl;
     freeCharArray(pChs);
+}
+
+void Pointer::useNamespace() {
+    // this cat is from "Cat.hpp" with default namespace
+    
+    Cat cat;
+    cat.speak();
+
+    kuli::Cat cat1;
+    cat1.speak();
+
 }

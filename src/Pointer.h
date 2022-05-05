@@ -15,5 +15,6 @@ public:
     static void returnObject();
     static void allocateMemory();
     static void passArray();
+    static void useNamespace();
 };
 #endif /* POINTER_H_ */
