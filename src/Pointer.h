@@ -14,5 +14,6 @@ public:
     static void newOperator();
     static void returnObject();
     static void allocateMemory();
+    static void passArray();
 };
 #endif /* POINTER_H_ */

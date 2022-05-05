@@ -224,3 +224,46 @@ void Pointer::allocateMemory() {
 
     delete [] chs;
 }
+
+void printArray(int size, string strs[]) {
+    // 8, which is the size of pointer, not the whole array
+    cout << "size of array in passing function: " <<sizeof(strs) << endl;
+}
+
+void pringPtrArray(int size, string *strs) {
+    // warning: ‘sizeof’ on array function parameter ‘strs’ will return size of ‘std::string*’
+    cout << "size of array in passing function using pointer: " <<sizeof(strs) << endl;
+    for (int i = 0; i < size; i += 1) {
+        cout << strs[i] << ", " << flush;
+    }
+    cout << endl;
+}
+
+// the size inside [] must be the actual size of the array
+void printRefArray(string (&strs)[3]) {
+    cout << "size of array in passing function using reference: " << sizeof(strs) << endl;
+}
+
+char * getCharArray(int size) {
+    char * pChs = new char[size];
+    return pChs;
+}
+
+void freeCharArray(char *pChs) {
+    delete pChs;
+}
+
+void Pointer::passArray() {
+    string strs[] = {"apple", "banana", "orange"};
+
+    // 96
+    cout << "size of array in defining function: " <<sizeof(strs) << endl;
+    int size = sizeof(strs)/sizeof(string);
+    printArray(size, strs);
+    pringPtrArray(size, strs);
+    printRefArray(strs);
+
+    char *pChs = getCharArray(10);
+    cout << sizeof(pChs) << endl;
+    freeCharArray(pChs);
+}

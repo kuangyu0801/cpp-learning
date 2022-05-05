@@ -58,6 +58,7 @@ void demoPointer() {
     Pointer::newOperator();
     Pointer::returnObject();
     Pointer::allocateMemory();
+    Pointer::passArray();
 }
 int main() {
     cout << "bla: " << Formular::bla(2) << endl;
