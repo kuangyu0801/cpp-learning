@@ -12,12 +12,15 @@ private:
 public:
     static int MAX_CNT;
 
-    //Machine(string name): name(name){};
+    // achine(string name): name(name){};
+    // counstructor cannot be inherited but is called during instantiation
     Machine() {
         cout << "Machine no-argument constructor" << endl;
         id = count;
         count += 1;
     }
+
+    Machine(int id): id(id) {cout << "Machine parameterized constructor" << endl;}
     bool isOn() {
         return onStatus;
     } 
@@ -47,6 +50,12 @@ int Machine::count = 0;
 // Vehicle inherits Machine
 class Vehicle: public Machine {
 public:
+    Vehicle() {
+        cout << "Vehicle no-argument constructor" << endl;
+    }
+
+    Vehicle(int id): Machine(id) {cout << "Vehicle parameterized constructor" << endl;}
+
 };
 
 
@@ -56,6 +65,9 @@ public:
     Car() {
         cout << "Car no-argument constructor" << endl;
     }
+
+    Car(int id): Vehicle(id) {cout << "Car parameterized constructor" << endl;}
+
     void drive() {
         cout << "Moving forward" << endl;
     }
@@ -74,6 +86,7 @@ void Inheritance::demo() {
     m.makeNoise();
     m.getCount();
     m.showId();
+    // Order of caling default constructor: Machine -> Vehicle -> Car
     Car c;
     c.makeNoise();
     c.setName("BMW iX");
@@ -93,8 +106,9 @@ void Inheritance::demo() {
 
 void Inheritance::demoConstuctor() {
     cout << "Cpp doesn't inherit constuctor" << endl;
+    Car c(9);
 }
 
 void Inheritance::demoStaticVariabe() {
-
+    Car c(9);
 }

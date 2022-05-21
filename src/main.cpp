@@ -51,6 +51,7 @@ void demoOOP() {
 void demoInheritance() {
     Inheritance inherit;
     inherit.demo();
+    inherit.demoConstuctor();
 }
 
 void demoPointer() {
