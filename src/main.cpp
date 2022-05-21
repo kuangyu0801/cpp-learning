@@ -4,6 +4,8 @@
 #include "Function.hpp"
 #include "Cat.hpp"
 #include "Pointer.h"
+#include "Inheritance.h"
+
 using namespace std;
 
 void demoFunctionClass() {
@@ -46,6 +48,10 @@ void demoOOP() {
     cout << cat5.toString() << endl;
 }
 
+void demoInheritance() {
+    Inheritance inherit;
+    inherit.demo();
+}
 
 void demoPointer() {
     Pointer::basic();
@@ -84,8 +90,8 @@ int main() {
     //demoFunctionClass();
     //demoOOP();
     //Demo::demoStringStream();
-    demoPointer();
-
+    //demoPointer();
+    demoInheritance();
 
     return 0;
 }

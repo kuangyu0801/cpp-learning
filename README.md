@@ -17,3 +17,21 @@ C++ OO/procedural, exception handling, encapsultation
 # Strings
 char[n] from cstring library
 string from std library
+
+# Question
+- What is the use case for reference, pointer, paramter
+- How to manually rebuild everyhing when adding new file? 
+- Why do I need to clean everything when adding a new file?
+- Scope for access modifier for static variable?
+```
+class Machine {
+private:
+    int count;
+public:
+    static int MAX_CNT;
+}
+
+// why is this allowed?
+int Machine::count = 0;
+int Machine::MAX_CNT = 10;
+```
